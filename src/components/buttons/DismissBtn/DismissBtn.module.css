@@ -1,0 +1,11 @@
+.dismiss {
+    fill: var(--pastel-yellow);
+}
+
+.delete {
+    fill: var(--pastel-red);
+}
+
+.active {
+    opacity: 100%;
+}

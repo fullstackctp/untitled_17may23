@@ -1,0 +1,84 @@
+.node {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 100%;
+    padding-right: 20px;
+}
+
+.align_center {
+    align-items: center;
+}
+
+.parent {
+    align-items: flex-start;
+}
+
+.parent .test_node {
+    background: white;
+    color: black;
+    font-size: 16px;
+    border: 1px dashed rgba(0, 0, 0, .5);
+    height: 40px;
+    padding: 10px 18px;
+}
+
+.left_section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.branch_link {
+    width: 1px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.test_node {
+    width: 130px;
+    max-width: 130px;
+    height: 36px;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    border-radius: .2rem;
+    padding-inline: 12px;
+    padding-block: 9px;
+    text-overflow: ellipsis;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    outline: none;
+}
+
+.edit_input {
+    border: 1px solid rgba(0, 0, 0, .4);
+    background-color: white;
+    text-align: center;
+    height: 36px;
+    width: 130px;
+    font-weight: 500;
+    font-size: 14px;
+    outline: 0;
+}
+
+.edit_input:focus {
+    border-color: rgba(0, 0, 0, .8);
+}
+
+.even_row {
+    background-color: var(--pastel-carrot);
+}
+
+.odd_row {
+    background-color: var(--pastel-skyblue);
+}
+
+.node_controls {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}

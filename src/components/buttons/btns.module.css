@@ -1,0 +1,17 @@
+.btn {
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    opacity: 40%;
+}
+
+.btn:hover {
+    opacity: 100%;
+}
+
+.btn_icon {}
+
+.btn_icon:hover {}
+
+.icon_path {}

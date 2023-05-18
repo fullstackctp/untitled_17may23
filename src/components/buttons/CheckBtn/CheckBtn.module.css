@@ -1,0 +1,4 @@
+.active {
+    fill: var(--pastel-green);
+    opacity: 100%;
+}

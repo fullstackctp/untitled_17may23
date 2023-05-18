@@ -1,0 +1,44 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 8;
+}
+
+.popup {
+    position: absolute;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 0 0  6px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.popup_title {
+    font-size: 20px;
+    font-weight: 500;
+    padding-block: 12px;
+}
+
+.btns_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.popup_btn {
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+}
+
+.popup_btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
