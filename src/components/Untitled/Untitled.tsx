@@ -11,6 +11,8 @@ let nodeId = 0;
 const Untitled = () => {
     const title = "Services";
     const count = 0;
+    let xDrag: number, yDrag: number;
+    const [dragging, setDragging] = useState<boolean>(false);
 
     const [data, setData] = useState<Data>({
         id: 0,
@@ -95,6 +97,26 @@ const Untitled = () => {
         }
     };
 
+    const handleDrag = (e: any) => {
+
+    };
+
+    const handleDragStart = (e: any) => {
+        xDrag = e.clientX;
+        yDrag = e.clientY;
+    };
+
+    const handleDragEnd = (e: any) => {
+        const xDiff = e.clientX - xDrag;
+        const yDIff = e.clientY - yDrag;
+        xDrag = e.clientX;
+        yDrag = e.clientY;
+        const percentDragX = (xDiff / 1400) * 100;
+        const percentDragY = (yDIff / 1400) * 100;
+        setLocTop(locTop + percentDragY);
+        setLocLeft(locLeft + percentDragX);
+    };
+
     const getHrLinkClass = (index: number, siblings: number) => {
         if (index === 0) {
             return styles.first_successor;
@@ -147,6 +169,9 @@ const Untitled = () => {
                 <WorkspaceNav onClick={handleWorkspaceNavigation} />
                 <div
                     className={`${styles.worksheet}`} draggable
+                    onDragEnd={(e: any) => handleDragEnd(e)}
+                    onDragStart={(e: any) => handleDragStart(e)}
+                    onDrag={(e: any) => handleDrag(e)}
                     style={{ transformOrigin: 'center', scale: `${currentZoom}%`, top: `${locTop}%`, left: `${locLeft}%`, translate: `${translateX}% ${translateY}%` }}
                 >
                     {renderTree(data, 0, data.successor.length - 1)}
